@@ -7,6 +7,6 @@ RUN apk add --no-cache nginx \
     && mv default.conf /etc/nginx/conf.d \
     && mv php.ini /usr/local/etc/php
 
-EXPOSE 80
+EXPOSE 80 6800
 CMD php-fpm & \
     nginx -g "daemon off;"
